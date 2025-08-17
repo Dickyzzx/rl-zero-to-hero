@@ -161,8 +161,8 @@ def run_experiment(
         avg_optimal = np.zeros(steps, dtype=float)   # 累加是否为最优（待会儿除以 runs 再转百分比）
 
         for i in range(runs):                        # 独立运行 runs 次
-            run_seed_env = int(rng_master.integers(0, 2**31 - 1))       # 为"环境"生成派生种子
-            run_seed_agent = int(rng_master.integers(0, 2**31 - 1))     # 为"智能体"生成派生种子
+            run_seed_env = int(rng_master.integers(0, 2**31 - 1))       # 为“环境”生成派生种子
+            run_seed_agent = int(rng_master.integers(0, 2**31 - 1))     # 为“智能体”生成派生种子
             rng_env = np.random.default_rng(run_seed_env)               # 环境的随机源
             rng_agent = np.random.default_rng(run_seed_agent)           # 智能体的随机源
 
